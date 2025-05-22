@@ -13,6 +13,8 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
 pinecone_index_name = os.getenv("PINECONE_INDEX_NAME")
+pinecone_namespace = os.getenv("PINECONE_NAMESPACE")
+
 
 # Inicializar Pinecone
 pc = Pinecone(api_key=pinecone_api_key)
@@ -28,7 +30,8 @@ embeddings = OpenAIEmbeddings(
 vector_store = PineconeVectorStore(
     index=index,
     embedding=embeddings,
-    text_key="text"
+    text_key="text",
+    namespace=pinecone_namespace
 )
 
 # Crear cadena de pregunta-respuesta
