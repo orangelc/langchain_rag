@@ -1,0 +1,58 @@
+# Entorno virtual
+venv/
+.env
+.env.*
+
+# Archivos Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de logs y runtime
+*.log
+*.pid
+*.sqlite3
+*.db
+
+# Configuración de editor
+.vscode/
+.idea/
+
+# Archivos de Jupyter Notebook checkpoint
+.ipynb_checkpoints
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación y distribución
+build/
+dist/
+*.egg-info/
+
+# Entorno de testing
+.coverage
+htmlcov/
+pytest_cache/
+
+# Archivos temporales
+*.swp
+*.bak
+*.tmp
+*.old
+
+# Archivos específicos de LangChain (si usas persistencia)
+lc_logs/
+cache/
+chroma/
+
+# Docker y containers
+*.pid
+*.sock
+docker-compose.override.yml
+
+#Zips
+*.zip
+
+#.env
+.env
